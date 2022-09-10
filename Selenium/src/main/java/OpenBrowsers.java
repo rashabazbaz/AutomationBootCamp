@@ -32,12 +32,17 @@ public class OpenBrowsers {
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
-		String[] browsers = {"firefox","chrome","edge"};
+		String[] browsers = {"chrome","firefox","edge"};
 		for(int i =0;i<browsers.length;i++) {
 			WebDriver driver = OpenBrowsers.openBrowser(browsers[i]);
 			driver.manage().window().maximize();
 			driver.get("https://www.google.com/");
-
+			Thread.sleep(5000);
+			driver.get("https://www.bing.com/");
+			Thread.sleep(5000);
+			driver.navigate().back();
+			Thread.sleep(5000);
+			driver.navigate().forward();
 			Thread.sleep(10000);
 			driver.quit();
 		}
