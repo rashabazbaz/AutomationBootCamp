@@ -12,12 +12,18 @@ public class TestBing {
 		Thread.sleep(10000);
 		WebElement search = driver.findElement(By.name("q"));
 		search.sendKeys("Selenium");
-		
-		search.clear();
-		search.sendKeys("Youtube");
+//		
+//		search.clear();
+//		search.sendKeys("Celin dion");
 		WebElement btn = driver.findElement(By.xpath("//*[@id=\"search_icon\"]"));
 		btn.click();
-		System.out.println(driver.findElement(By.xpath("//*[@id=\"b_results\"]/li[1]/h2/a")).getText());
+		try {
+			System.out.println(driver.findElement(By.xpath("//*[@id=\"b_results\"]/*/h2/a[1]")).getText());
+		}catch (Exception e) {
+			System.out.println(driver.findElement(By.xpath("//*[@id=\"b_results\"]/h2/a[1]")).getText());	
+		}
+		
 		System.out.println("Test");
+		
 	}
 }
