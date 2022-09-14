@@ -12,6 +12,7 @@ public class BingResults {
 	
 	public BingResults(WebDriver driver) {
 		this.driver = driver;
+		
 	}
 	
 	public List<WebElement> getResults(){
