@@ -2,7 +2,6 @@ package BankTest;
 
 import static org.testng.Assert.assertNotEquals;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
