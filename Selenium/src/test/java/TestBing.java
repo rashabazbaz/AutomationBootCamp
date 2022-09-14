@@ -1,9 +1,12 @@
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import Core.OpenBrowsers;
 
 public class TestBing {
 
@@ -14,9 +17,7 @@ public class TestBing {
 		Thread.sleep(10000);
 		WebElement search = driver.findElement(By.name("q"));
 		search.sendKeys("Selenium");
-		//		
-		//		search.clear();
-		//		search.sendKeys("Celin dion");
+		search.sendKeys(Keys.ENTER);
 		WebElement btn = driver.findElement(By.xpath("//*[@id=\"search_icon\"]"));
 		btn.click();
 		List<WebElement> results = driver.findElements(By.xpath("//*[@id=\"b_results\"]//*/h2/a")); 
@@ -26,7 +27,6 @@ public class TestBing {
 		}
 		
 		driver.quit();
-		//driver.switchTo().alert().accept();
 		System.out.println("Test");
 
 	}
