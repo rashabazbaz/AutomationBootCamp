@@ -26,7 +26,7 @@ public class TestComboBoxUsage {
 		
 		
 
-		skills.selectByValue("Ruby");
+		skills.selectByVisibleText("Ruby");
 		Thread.sleep(10000);
 		System.out.println(skills.getFirstSelectedOption().getText());
 		driver.quit();

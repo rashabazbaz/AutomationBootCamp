@@ -29,26 +29,30 @@ public class LoginPage {
 
 	public String getErrorMsgUserId() {
 		String msg = "";
-
-		try {
-			useErr = driver.findElement(By.id("message23"));
-			msg = useErr.getText();
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+		useErr = driver.findElement(By.id("message23"));
+		msg = useErr.getText();
+//		try {
+//			useErr = driver.findElement(By.id("message23"));
+//			msg = useErr.getText();
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
 
 		return msg;
 	}
 
 	public String getErrorMsgPassword() {
 		String msg = "";
-
-		try {
-			passErr = driver.findElement(By.id("message18"));
-			msg = passErr.getText();
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+		passErr = driver.findElement(By.id("message18"));
+		
+		msg = passErr.getText();
+//
+//		try {
+//			passErr = driver.findElement(By.id("message18"));
+//			msg = passErr.getText();
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
 
 		return msg;
 	}
