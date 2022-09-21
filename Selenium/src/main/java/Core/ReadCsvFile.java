@@ -25,8 +25,5 @@ public class ReadCsvFile {
 		return data;
 	}
 	
-	public static void main(String[] args) throws Exception {
-		List<String[]> data = ReadCsvFile.readAllLines("input.csv");
-		System.out.println("test");
-	}
+
 }

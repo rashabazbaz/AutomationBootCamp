@@ -18,6 +18,7 @@ public class TestLogout {
 		Thread.sleep(10000);
 		driver.findElement(By.partialLinkText("Log out")).click();
 		try {
+			System.out.println(driver.switchTo().alert().getText());
 			driver.switchTo().alert().accept();
 		}catch (Exception e) {
 			// TODO: handle exception

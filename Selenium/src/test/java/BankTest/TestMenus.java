@@ -2,24 +2,35 @@ package BankTest;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Core.OpenBrowsers;
+import Core.TakeScreenShot;
 import Pages.BankSystem.LoginPage;
 
 public class TestMenus {
 	WebDriver driver;
+	String menuName;
 	@BeforeSuite
 	public void before() throws InterruptedException {
 		driver = OpenBrowsers.openBrowser("chrome");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		driver.get("https://demo.guru99.com/V1/index.php");
 		Thread.sleep(10000);
 		String userIdVal = "mngr438269";
@@ -29,8 +40,11 @@ public class TestMenus {
 	}
 	@Test(dataProvider = "getTitles")
 	public void testMenu(String menuText) throws InterruptedException {
-		if (menuText != "Log out") {
+		menuName = menuText;
+		if (!menuText.equals("Log out")) {
 			WebElement menuItem  =driver.findElement(By.linkText(menuText));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(menuText)));
 			String partialUrl = menuItem.getAttribute("href");
 			menuItem.click();
 			if (driver.getCurrentUrl().contains("#")) {
@@ -59,5 +73,16 @@ public class TestMenus {
 		return data;
 
 	}
-
+	@AfterMethod
+	public void afterMethod(ITestResult result) throws IOException {
+		if(result.getStatus() == ITestResult.FAILURE) {
+			TakeScreenShot takeScr = new TakeScreenShot(driver);
+			takeScr.takeScreenShot(result.getName()+"_"+menuName.replace(" ", "_")+".jpg");
+		}
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		driver.quit();
+	}
 }
