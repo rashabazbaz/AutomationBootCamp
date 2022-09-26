@@ -23,6 +23,7 @@ public class TestWithDP {
 	@BeforeSuite
 	public void beforeSuite() throws InterruptedException {
 		driver = OpenBrowsers.openchromeWithOptions();
+		//driver = OpenBrowsers.openBrowser("chrome");
 		outputHeaders.add("hotel_id");
 		outputHeaders.add("name");
 		outputHeaders.add("city");
