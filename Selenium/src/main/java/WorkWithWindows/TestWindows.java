@@ -34,6 +34,7 @@ public class TestWindows {
 		//driver.switchTo().window(thirdTab).close();
 		driver.switchTo().window(firstWindow);
 		driver.get("https://www.google.com/");
+		driver.navigate().refresh();
 		Thread.sleep(5000);
 		driver.quit();
 	}

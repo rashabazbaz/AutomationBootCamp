@@ -1,7 +1,7 @@
 "hotel_id","name","city","address","link 1","link 2"
 "1098020","Roda Amwaj Suites Jumeirah Beach Residence","Dubai","The Walk","https://www.expedia.com/Dubai-Hotels-Roda-Amwaj-Suites.h8745057.Hotel-Information"
 "412338","Ramada Plaza Jumeirah Beach","Dubai","Bahar 7","https://www.expedia.com/Dubai-Hotels-Ramada-Hotel-And-Suites-By-Wyndham-Dubai-JBR.h6915556.Hotel-Information","https://www.expedia.com/Dubai-Hotels-Delta-Hotels-By-Marriott-Jumeirah-Beach.h4480234.Hotel-Information"
-"179356","Meriton Suites Kent Street","Sydney","528 Kent Street","hotel not found"
+"179356","Meriton Suites Kent Street","Sydney","528 Kent Street","https://www.expedia.com/Sydney-Hotels-Meriton-Suites-Kent-Street.h19290784.Hotel-Information"
 "2356868","Marlin Waterloo","London","111 Westminster Bridge Road","https://www.expedia.com/London-Hotels-Marlin-Waterloo.h18561390.Hotel-Information"
 "1374533","Hyatt Regency Creek Heights Residences","Dubai","Dubai Healthcare City","https://www.expedia.com/Dubai-Hotels-Hyatt-Regency-Dubai-Creek-Heights-Residences.h24197743.Hotel-Information","https://www.expedia.com/Dubai-Hotels-Hyatt-Regency-Dubai-Creek-Heights.h9709394.Hotel-Information"
 "123456","Leonardo","tel aviv","156 Hayarkon Street, Tel Aviv, 63451 ","https://www.expedia.com/Tel-Aviv-Hotels-Leonardo-Beach-Tel-Aviv.h9925.Hotel-Information"

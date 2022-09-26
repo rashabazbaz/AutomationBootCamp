@@ -14,9 +14,9 @@ public class TestUpload {
 		driver.get("https://demo.guru99.com/test/upload/");
 		File file = new File("input.csv");
 		driver.findElement(By.name("uploadfile_0")).sendKeys(file.getAbsolutePath());
-		
-		driver.findElement(By.id("submitbutton")).click();
 		driver.findElement(By.id("terms")).click();
+		driver.findElement(By.id("submitbutton")).click();
+		
 		
 		
 	}

@@ -1,28 +1,12 @@
-<suite name="Cross Browser Test" parallel = "tests">
+<suite name="Expedia Test">
 
-  <test name="Firfox" >
-  	<parameter name="browser"  value="firefox"/>
+  <test name="Expedia Test" >
 
     <classes>
-       <class name="TestBrowsersWithParameters" />
+       <class name="ExpediaTest.TestWithDP" />
     </classes>
   </test>
   
-  <test name="Chrome" >
-  	<parameter name="browser"  value="chrome"/>
 
-    <classes>
-       <class name="TestBrowsersWithParameters" />
-    </classes>
-  </test>
-  
-  <test name="Edge" >
-  	<parameter name="browser"  value="edge"/>
-
-    <classes>
-       <class name="TestBrowsersWithParameters" />
-    </classes>
-  </test>
-  
   
 </suite>
