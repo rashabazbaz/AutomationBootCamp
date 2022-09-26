@@ -22,7 +22,7 @@ public class TestWithDP {
 	ArrayList<ArrayList<String>> outputData = new ArrayList<ArrayList<String>>();
 	@BeforeSuite
 	public void beforeSuite() throws InterruptedException {
-		driver = OpenBrowsers.openBrowser("chrome");
+		driver = OpenBrowsers.openchromeWithOptions();
 		outputHeaders.add("hotel_id");
 		outputHeaders.add("name");
 		outputHeaders.add("city");

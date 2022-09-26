@@ -26,7 +26,7 @@ public class OpenBrowsers {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", chromePrefs);
 		options.addArguments("--start-maximized");
-		//options.addArguments("--headless");
+		options.addArguments("--headless");
 		options.addArguments("--disable-infobars");
 
 		driver = new ChromeDriver(options);
