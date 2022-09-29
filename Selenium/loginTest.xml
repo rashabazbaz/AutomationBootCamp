@@ -1,0 +1,12 @@
+<suite name="Expedia Test">
+
+  <test name="Expedia Test" >
+
+    <classes>
+       <class name="ExpediaTest.TestWithDP" />
+    </classes>
+  </test>
+  
+
+  
+</suite>
