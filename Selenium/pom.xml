@@ -14,7 +14,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile> </suiteXmlFile>
+                        <suiteXmlFile>testNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
