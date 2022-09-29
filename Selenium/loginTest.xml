@@ -3,7 +3,7 @@
   <test name="Expedia Test" >
 
     <classes>
-       <class name="ExpediaTest.TestWithDP" />
+       <class name="BankTest.TestLogin" />
     </classes>
   </test>
   
