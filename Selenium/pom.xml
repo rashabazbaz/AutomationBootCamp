@@ -12,7 +12,11 @@
         <plugins>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-               
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile> </suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
             </plugin>
         </plugins>
     </pluginManagement>
