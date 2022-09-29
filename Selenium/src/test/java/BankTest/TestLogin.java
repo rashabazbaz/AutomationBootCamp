@@ -17,7 +17,7 @@ public class TestLogin {
 	String passVal = "zegYzyh";
 	@BeforeSuite
 	public void beforeSuite() throws InterruptedException {
-		driver = OpenBrowsers.openBrowser("chrome");
+		driver = OpenBrowsers.openchromeWithOptions();
 		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/V1/index.php");
 		Thread.sleep(10000);
