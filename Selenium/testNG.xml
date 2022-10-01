@@ -1,9 +1,9 @@
-<suite name="Expedia Test">
+<suite name="password Test">
 
-  <test name="Expedia Test" >
+  <test name="password Test" >
 
     <classes>
-       <class name="ExpediaTest.TestWithDP" />
+       <class name="workWithProp" />
     </classes>
   </test>
   
