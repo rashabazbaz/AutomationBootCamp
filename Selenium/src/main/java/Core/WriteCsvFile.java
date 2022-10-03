@@ -29,5 +29,7 @@ public class WriteCsvFile {
 	    }
 	}
 	
-	
+	public static void main(String[] args) {
+		
+	}
 }
