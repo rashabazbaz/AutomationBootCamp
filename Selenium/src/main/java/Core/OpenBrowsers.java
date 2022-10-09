@@ -54,6 +54,7 @@ public class OpenBrowsers {
         // Creating FirefoxOptions to set profile
         FirefoxOptions option = new FirefoxOptions();
         option.setProfile(profile);
+        option.setHeadless(true);
         // Launching browser with desired capabilities
 
 		driver = new FirefoxDriver(option);
