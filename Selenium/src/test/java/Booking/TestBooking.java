@@ -1,6 +1,8 @@
 package Booking;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -35,6 +37,11 @@ public class TestBooking {
 		driver.findElement(By.className("sb-searchbox__button")).click();
 		TakeScreenShot takeSc = new TakeScreenShot(driver);
 		takeSc.takeScreenShot("downloads/booking.jpg");
+		
+		Thread.sleep(5000);
+//		List<WebElement> links =driver.findElements(By.xpath("//*[@data-testid=\"title\"]/.."));
+//		links.get(0).click();
+		driver.findElement(By.xpath("//*[@data-testid=\"title\"]/..")).click();
 //		
 
 
