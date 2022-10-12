@@ -1,15 +1,14 @@
-class Teacher:
+from University.Person import Person
+
+
+class Teacher(Person):
     Name = None
     id = None
     courses = []
 
     def __init__(self, name, id):
-        self.Name = name
-        self.id = id
+        super().__init__(name, id)
         self.courses = []
-
-    def getInformation(self):
-        print(self.Name + ", " + self.id)
 
     def getCourses(self):
         return self.courses

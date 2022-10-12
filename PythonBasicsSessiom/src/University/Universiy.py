@@ -12,7 +12,7 @@ if __name__ == '__main__':
     thirdTeach = Teacher.Teacher("Rana", "12333")
     teachers = [firstTeach,secondTeach,thirdTeach]
     for tech in teachers:
-        tech.getInformation()
+        tech.getInfo()
     #Create 6 courses and
     cour_list = []
     for i in range(6):
