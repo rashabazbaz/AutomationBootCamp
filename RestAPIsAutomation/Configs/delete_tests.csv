@@ -1,0 +1,4 @@
+route, expected_status
+/posts/1,400
+/posts/1000,404
+/posts/test,404

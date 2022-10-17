@@ -1,0 +1,32 @@
+[
+  {
+    "route":  "/posts",
+    "expected_status":  404,
+    "body": {
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit r"
+    }
+  },
+  {
+    "route":  "/posts/1",
+    "expected_status":  200,
+    "body": {
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit r"
+    }
+  },
+  {
+    "route":  "/posts/22222",
+    "expected_status":  404,
+    "body": {
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit r"
+    }
+  }
+]

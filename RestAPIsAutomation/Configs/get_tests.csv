@@ -1,0 +1,11 @@
+route, expected_status
+/posts,200
+/posts/1,400
+/posts/1000,404
+/posts/test,404
+/comments?postId=1,200
+/comments?postId=test,404
+/comments?postId=10000,404
+/posts/1/comments,200
+/posts/3333/comments,404
+/posts/test/comments,404
