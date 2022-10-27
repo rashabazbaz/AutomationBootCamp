@@ -1,11 +1,9 @@
-import static org.testng.Assert.assertEquals;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.net.URL;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
@@ -16,7 +14,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class CurrencyTest {
 	@Test
-	public void CurrencyTest() throws IOException, InterruptedException {
+	public void Currency_Test() throws IOException, InterruptedException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "1C171FDEE00AUC");
 		capabilities.setCapability("appPackage", "com.prince.studio.newcurrency");
