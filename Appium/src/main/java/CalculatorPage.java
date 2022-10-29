@@ -1,5 +1,4 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -18,19 +17,19 @@ public class CalculatorPage {
 	}
 	
 	public void clearResults() {
-		WebElement btn=driver.findElement(By.id("com.bak.mnr.calculatrice:id/btnC"));
-		btn.clear();
+		AndroidElement btn=driver.findElement(By.id("com.bak.mnr.calculatrice:id/btnC"));
+		btn.click();
 		
 	}
 	
 	public String getResultText() {
-		WebElement results=driver.findElement(By.id("com.bak.mnr.calculatrice:id/Cadre"));
+		AndroidElement results=driver.findElement(By.id("com.bak.mnr.calculatrice:id/Cadre"));
 		return results.getText();
 	}
 	
 	
 	public void writeInResults(String value) {
-		WebElement results=driver.findElement(By.id("com.bak.mnr.calculatrice:id/Cadre"));
+		AndroidElement results=driver.findElement(By.id("com.bak.mnr.calculatrice:id/Cadre"));
 		results.clear();
 		results.sendKeys(value);
 	}
