@@ -1,5 +1,6 @@
 package ExpediaTest;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import Core.AttachFiles;
 import Core.OpenBrowsers;
 import Core.ReadCsvFile;
 import Core.WriteCsvFile;
@@ -48,7 +50,7 @@ public class TestWithDP {
 	@Test(dataProvider = "getData")
 	public void testExpediaLinks(String hotel_id, String name, String city, String	address) {
 		String searchText = name + " " + city + " expedia";
-		
+
 		ArrayList<String> currOutput = new ArrayList<String>();
 		currOutput.add(hotel_id);
 		currOutput.add(name);
@@ -58,7 +60,7 @@ public class TestWithDP {
 		home.search(searchText);
 		BingResults resPage = new BingResults(driver);
 		List<String> results = resPage.getLinks();
-		
+
 		ArrayList<String> links = new ArrayList<String>();
 		for(String link: results) {
 
@@ -82,7 +84,7 @@ public class TestWithDP {
 		driver.get("https://www.bing.com/");
 	}
 	@AfterSuite
-	public void afterSuite() {
+	public void afterSuite() throws IOException {
 		driver.quit();
 		List<String[]> data = new ArrayList<String[]>();
 		for(ArrayList<String> row: outputData) {
@@ -97,6 +99,8 @@ public class TestWithDP {
 			headers[i] = outputHeaders.get(i);
 		}
 		WriteCsvFile.writeDataLineByLine("output.csv", data, headers);
-		
+
+		AttachFiles.attachCsv("output.csv", "output.csv");
+
 	}
 }
